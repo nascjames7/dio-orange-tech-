@@ -1,0 +1,15 @@
+{
+  "name": "dio-desafio-javascript-inicial",
+  "version": "1.0.0",
+  "description": "Projeto para resolver desafios JavaScript da DIO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "JavaScript"
+  ],
+  "author": "James",
+  "license": "ISC"
+}
