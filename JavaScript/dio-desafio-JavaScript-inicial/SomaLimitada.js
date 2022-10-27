@@ -22,7 +22,7 @@
 
 
 //Solicitação  e leitura dos valores (numeroNarural e valorLimiteDosMultiplos).
-var numeroNatural = parseInt(gets());
+var numeroNatural = parseInt(getss());
 var valorLimiteDosMultiplos = parseInt(gets()); 
 
 const limiteDoFor = parseInt(valorLimiteDosMultiplos/numeroNatural);
