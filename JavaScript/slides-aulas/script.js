@@ -1,0 +1,1 @@
+script('Tudo certo jovem!')
