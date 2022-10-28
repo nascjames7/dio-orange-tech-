@@ -10,24 +10,15 @@
 * @since 28/10/2022
 */
 
-'use strict'
+
 
 let numero = parseInt(gets());
 
-var soma = numero;
+let soma = numero;
 
-function somatorio(numero){
+for(let posicao = 0; posicao < numero; posicao++){
 
-  for(let posicao = numero; posicao > 0; posicao--){
-  
-    if(numero === 0) {
-      
-      soma = 0;
-              
-    } else soma += (numero - 1);      
-    
-  }
-    return soma;
-}
+    soma += (numero-1)/2; 
+} 
 
 console.log(soma);
