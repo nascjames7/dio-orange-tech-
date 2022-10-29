@@ -59,10 +59,36 @@ tiposDistintos.forEach(function(item, index){console.log(item, index)});
 console.log(tiposDistintos.indexOf(null));
 
 //Apaga os elementos entre os índices por arrays.
-tiposDistintos.splice(2,4);
+tiposDistintos.splice(2, 4);
 console.log(tiposDistintos);
 
 //Retorna uma parte do array.
-tiposDistintos.slice(0,3);
+tiposDistintos.slice(0, 3);
 console.log(tiposDistintos);
+
+//Objetos
+
+//Criação de objetos
+let object = {string: "string", number: 7, boolean: true, array: [12, 15, 45], 
+null: null, objetoInterno: {objetoInterno: "objetoInterno" }};
+console.log(object);
+
+//Acessar propriedades do objeto (desestruturação)
+console.log(object.boolean);
+console.log(object.objetoInterno);
+console.log(object.number);
+console.log(object.array[2]);
+
+//Atribuindo elementos do objeto a uma variavel
+var string = object.string;
+console.log(string);
+
+var array = object.array;
+console.log(array);
+
+//Desestruturação(atribuir a uma ou mais variaveis um ou mais elementos de um objeto)
+var {boolean, string, number, objetoInterno} = object;
+console.log(boolean, string, number, objetoInterno);
+
+
 
