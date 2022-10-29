@@ -1,1 +1,0 @@
-script('Tudo certo jovem!')
