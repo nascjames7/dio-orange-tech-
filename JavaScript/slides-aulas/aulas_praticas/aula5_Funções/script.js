@@ -42,3 +42,34 @@ var idade = prompt("Qual a sua idade?");
 console.log(validar);
 
 //******************************************//
+
+//Tipos de Função
+
+//Função declarativa
+function funcao(){
+
+    console.log("Sou a mensagem de uma função declarativa.");
+}
+
+funcao();
+
+//********************************** */
+
+//Expressão de função 
+var funcao = function funcao(){
+
+    console.log("Sou a mensagem de uma função de expressão.");
+}
+
+funcao();
+
+//********************************** */
+
+//Arrow function
+var funcao = () => {
+
+    console.log("Sou uma arrow function");
+}
+
+funcao();
+
