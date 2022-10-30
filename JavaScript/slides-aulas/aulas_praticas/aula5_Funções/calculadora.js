@@ -7,102 +7,120 @@ function calculadora(){
     let numero2 = Number(prompt("Digite o segundo numero: "));
     let resultado;
 
-    //Implementação das funções operacionais.
-    function soma(){
+    //Verificação de possíveis erros(operacao).
+    if(!operacao || operacao >= 7){
 
-        resultado = numero1 + numero2;
-        alert(`${numero1} + ${numero2} = ${resultado}`)
-        //Permite fazer uma nova operação sem atualiazar.
-        novaOperacao();
-    }    
+        alert("Erro - operacao inválida!")
+        calculadora();
 
-    function subtracao(){
+    }else{
 
-        resultado = numero1 - numero2;
-        alert(`${numero1} - ${numero2} = ${resultado}`)
-        novaOperacao();
-    }
+        //Verificação de possíveis erros(numero1 e numero2).
+        if(!numero1 || !numero2){
 
-    function multiplicacao(){
-
-        resultado = numero1 * numero2;
-        alert(`${numero1} * ${numero2} = ${resultado}`)
-        novaOperacao();
-    }
-
-    function divisaoReal(){
-
-        resultado = numero1 / numero2;
-        alert(`${numero1} / ${numero2} = ${resultado}`)
-        novaOperacao();
-    }
-
-    function divisaoInteira(){
-
-        resultado = numero1 % numero2;
-        alert(`O resto da divisão entre ${numero1} e ${numero2} é ${resultado}`)
-        novaOperacao();
-    }
-
-    function potenciacao(){
-
-        resultado = numero1 ** numero2;
-        alert(`${numero1} elevado a ${numero2}ª é igual a ${resultado}`)
-        novaOperacao();
-    }
-
-    //Finalização/Continuação
-    function novaOperacao(){
-
-        let opcao = prompt("Deseja fazer outra opercao: \n 1 - Sim\ 2 - Não");
-
-        if(opcao == 1){
-
+            alert("Erro - parâmetros inválidos!")
             calculadora();
-        }else if (opcao == 2){
 
-            alert("Até mais!")
         }else{
 
-            alert("Digite uma opção válida:")
-            novaOperacao();
-        }
-    }
+                //Implementação das funções operacionais.
+                function soma(){
 
-    //Implementação do switch para escolha da operação.
-    switch(operacao){
+                resultado = numero1 + numero2;
+                alert(`${numero1} + ${numero2} = ${resultado}`)
+                //Permite fazer uma nova operação sem atualiazar.
+                novaOperacao();
+                }    
 
-        case operacao = 1:
-            soma();
-            break;
+                function subtracao(){
 
-        case operacao = 2:
-            subtracao();
-            break;
+                resultado = numero1 - numero2;
+                alert(`${numero1} - ${numero2} = ${resultado}`)
+                novaOperacao();
+                }
 
-        case operacao = 3:
-            multiplicacao();
-            break;
+                function multiplicacao(){
 
-        case operacao = 4:
-            divisaoReal();
-            break;
+                resultado = numero1 * numero2;
+                alert(`${numero1} * ${numero2} = ${resultado}`)
+                novaOperacao();
+                }
 
-        case operacao = 5:
-            divisaoInteira();
-            break;
+                function divisaoReal(){
 
-        case operacao = 6:
-            potenciacao();
-            break;
+                resultado = (numero1 / numero2).toFixed(2);
+                alert(`${numero1} / ${numero2} = ${resultado}`)
+                novaOperacao();
+                }
 
-        default:
-            console.log("Alguma coisa deu errado!");
-            break;
+                function divisaoInteira(){
 
-    }    
+                resultado = numero1 % numero2;
+                alert(`O resto da divisão entre ${numero1} e ${numero2} é ${resultado}`)
+                novaOperacao();
+                }
+
+                function potenciacao(){
+
+                resultado = numero1 ** numero2;
+                alert(`${numero1} elevado a ${numero2}ª é igual a ${resultado}`)
+                novaOperacao();
+                }
+
+                //Finalização/Continuação
+                function novaOperacao(){
+
+                let opcao = prompt("Deseja fazer outra opercao: \n 1 - Sim\ 2 - Não");
+
+                if(opcao == 1){
+
+                    calculadora();
+                }else if (opcao == 2){
+
+                    alert("Até mais!")
+                }else{
+
+                    alert("Digite uma opção válida:")
+                    novaOperacao();
+                    }
+                }
+
+                //Implementação do switch para escolha da operação.
+                switch(operacao){
+
+                case operacao = 1:
+                    soma();
+                    break;
+
+                case operacao = 2:
+                    subtracao();
+                    break;
+
+                case operacao = 3:
+                    multiplicacao();
+                    break;
+
+                case operacao = 4:
+                    divisaoReal();
+                    break;
+
+                case operacao = 5:
+                    divisaoInteira();
+                    break;
+
+                case operacao = 6:
+                    potenciacao();
+                    break;
+
+                default:
+                    console.log("Alguma coisa deu errado!");
+                    break;
+
+                }
+            } 
+         }
+                
 
 }
-
 //Chamada da função calculadora.
 calculadora();
